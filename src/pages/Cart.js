@@ -121,7 +121,7 @@ export default function () {
           </table>
           <button className="normal">Checkout</button>
         </div>
-      </section>
+      </section>   
     </React.Fragment>
   );
 }

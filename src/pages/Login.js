@@ -3,6 +3,21 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import { Link } from "react-router-dom";
 
 export default function Login() {
+  // handle menu toggle
+  const onClickToggle = (params) => {
+    const LoginForm = document.getElementById("LoginForm");
+    const RegForm = document.getElementById("RegForm");
+    const Indicator = document.getElementById("Indicator");
+    if (params === "login") {
+      RegForm.style.transform = "translatex(300px)";
+      LoginForm.style.transform = "translatex(300px)";
+      Indicator.style.transform = "translate(0px)";
+    } else {
+      RegForm.style.transform = "translatex(0px)";
+      LoginForm.style.transform = "translatex(0px)";
+      Indicator.style.transform = "translateX(100px)";
+    }
+  };
   return (
     <React.Fragment>
       <section id="hero" className="login">
@@ -12,12 +27,8 @@ export default function Login() {
               <div className="col-2">
                 <div className="form-container">
                   <div className="form-btn">
-                    <span className="active" onclick="login()">
-                      Login
-                    </span>
-                    <span className="active" onclick="register()">
-                      Register
-                    </span>
+                    <span onClick={() => onClickToggle("login")}>Login</span>
+                    <span onClick={() => onClickToggle("register")}>Register</span>
                     <hr id="indicator" />
                   </div>
                   <form action="" id="LoginForm">

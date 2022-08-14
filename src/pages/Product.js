@@ -13,21 +13,23 @@ export default function product() {
       <section id="product1" className="section-p1">
         <div className="pro-container">
           <div className="pro" onclick="window.location.href='productDetail.html';">
-            <img src="assets/img/products/f1.jpg" alt="" />
-            <div className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
+            <Link to="/productDetail">
+              <img src="assets/img/products/f1.jpg" alt="" />
+              <div className="des">
+                <span>adidas</span>
+                <h5>Cartoun astronot tshirt</h5>
+                <div className="star">
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                </div>
+                <h4>$78</h4>
               </div>
-              <h4>$78</h4>
-            </div>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
+              <a href="#">
+                <i className="fa fa-shopping-cart cart"></i>
+              </a>
+            </Link>
           </div>
           <div className="pro">
             <img src="assets/img/products/f2.jpg" alt="" />

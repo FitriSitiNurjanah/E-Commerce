@@ -726,6 +726,26 @@ form a {
   #banner {
     height: 20vh;
   }
+  #banner h4 {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 23px;
+  }
+  #banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
+  #banner h2 span {
+    color: #ef3636;
+  }
+
+  #banner button:hover {
+    margin-bottom: -20px;
+    background: #088178;
+    color: #fff;
+  }
 
   /* LOGIN */
   .form-container {
@@ -742,6 +762,32 @@ form a {
 }
 
 @media (max-width: 414px) {
+  /* BANNER PRODUCT*/
+  #banner {
+    height: 20vh;
+  }
+  #banner h4 {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 23px;
+  }
+  #banner h2 {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  #banner h2 span {
+    color: #ef3636;
+  }
+  #banner button {
+    margin-bottom: 50px;
+  }
+  #banner button:hover {
+    margin-bottom: 50px;
+    background: #088178;
+    color: #fff;
+  }
   /* SINGLE PRODUCT */
   #prodetails {
     display: flex;
@@ -757,6 +803,66 @@ form a {
   }
 
   /* CARD PAGE */
+  #cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+  }
+  #cart {
+    overflow-x: auto;
+  }
+  #cart table img {
+    width: 70px;
+  }
+
+  #cart table td:nth-child(1) {
+    width: 80px;
+    text-align: center;
+  }
+  #cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+  }
+  #cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+  }
+  #cart table td:nth-child(4) #cart table td:nth-child(5) #cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+  }
+
+  #cart table td:nth-child(5) input {
+    width: 50px;
+    text-align: center;
+    line-height: 20px;
+    padding: 10px, 5px, 10px, 15px;
+  }
+
+  #cart table thead {
+    border: 1px solid #e2e9e1;
+    line-height: 50px;
+    border-left: none;
+    border-right: none;
+  }
+
+  #cart table thead td {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px, 0;
+  }
+
+  #cart table tbody tr td {
+    padding-top: 15px;
+  }
+
+  #cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
   #card-add {
     flex-direction: column;
   }
