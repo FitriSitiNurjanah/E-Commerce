@@ -3,6 +3,14 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import { Link } from "react-router-dom";
 
 export default function () {
+  const HandlerToggleMobile = () => {
+    const nav = document.getElementById("navbar");
+    nav.classList.add("active");
+  };
+  const HandlerToggleClose = () => {
+    const nav = document.getElementById("navbar");
+    nav.classList.remove("active");
+  };
   return (
     <React.Fragment>
       {" "}
@@ -28,7 +36,7 @@ export default function () {
                 <i className="fa fa-shopping-cart"></i>
               </Link>
             </li>
-            <a href="#" id="close">
+            <a href="#" id="close" onClick={HandlerToggleClose}>
               <i className="fa fa-times"></i>
             </a>
           </ul>
@@ -37,7 +45,7 @@ export default function () {
           <Link to="/cart">
             <i className="fa fa-shopping-cart"></i>
           </Link>
-          <i id="bar" className="fa fa-outdent"></i>
+          <i id="bar" className="fa fa-outdent" onClick={HandlerToggleMobile}></i>
         </div>
       </section>
     </React.Fragment>

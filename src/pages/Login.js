@@ -29,7 +29,7 @@ export default function Login() {
                   <div className="form-btn">
                     <span onClick={() => onClickToggle("login")}>Login</span>
                     <span onClick={() => onClickToggle("register")}>Register</span>
-                    <hr id="indicator" />
+                    {/* <hr id="indicator" /> */}
                   </div>
                   <form action="" id="LoginForm">
                     <input type="text" placeholder="Username" />
