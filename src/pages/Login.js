@@ -1,8 +1,34 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { auth, logInWithEmailAndPassword } from "../config/firebase/index";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  //State for the form
+  const [login, setLogin] = useState({
+    email: "",
+    password: "",
+  });
+  const handleLogin = async (e, params) => {
+    e.preventDefault();
+    console.log("TEST");
+    if (params === "login") {
+      await logInWithEmailAndPassword(login.email, login.password);
+      console.log("SELESAI await");
+    }
+  };
+
+  useEffect(() => {
+    if (loading) {
+      return;
+    }
+    if (user) navigate("/");
+    if (error) alert(error);
+  }, [loading, user, error, navigate]);
+
   // handle menu toggle
   const onClickToggle = (params) => {
     const LoginForm = document.getElementById("LoginForm");
@@ -32,10 +58,9 @@ export default function Login() {
                     {/* <hr id="indicator" /> */}
                   </div>
                   <form action="" id="LoginForm">
-                    <input type="text" placeholder="Username" />
-                    <input type="password" placeholder="Password" />
-
-                    <button type="submit" className="btn">
+                    <input type="text" placeholder="Username" onChange={(e) => setLogin({ ...login, email: e.target.value })} />
+                    <input type="password" placeholder="Password" onChange={(e) => setLogin({ ...login, password: e.target.value })} />
+                    <button type="submit" className="btn" onClick={(e) => handleLogin(e, "login")}>
                       Login
                     </button>
                     <a href="">Forgot Password</a>
