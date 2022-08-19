@@ -1,8 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { auth, db, logout } from "../config/firebase/index";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function () {
+  const [user] = useAuthState(auth);
   const HandlerToggleMobile = () => {
     const nav = document.getElementById("navbar");
     nav.classList.add("active");
@@ -27,15 +29,30 @@ export default function () {
             <li>
               <Link to="/product">Product</Link>
             </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li id="lg-bag">
-              {" "}
-              <Link to="/cart">
+            {user ? (
+              <li>
+                <div id="logout" onClick={logout}>
+                  Logout
+                </div>
+              </li>
+            ) : (
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            )}
+            {user ? (
+              <li id="lg-bag">
+                {" "}
+                <Link to="/cart">
+                  <i className="fa fa-shopping-cart"></i>
+                </Link>
+              </li>
+            ) : (
+              <Link to="/login">
                 <i className="fa fa-shopping-cart"></i>
               </Link>
-            </li>
+            )}
+
             <a href="#" id="close" onClick={HandlerToggleClose}>
               <i className="fa fa-times"></i>
             </a>

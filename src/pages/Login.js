@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { auth, logInWithEmailAndPassword } from "../config/firebase/index";
+import { auth, logInWithEmailAndPassword, registerWithEmailAndPassword } from "../config/firebase/index";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 
@@ -8,16 +8,23 @@ export default function Login() {
   const navigate = useNavigate();
 
   //State for the form
-  const [login, setLogin] = useState({
+  const [login, setLogin] = useState({ email: "", password: "" });
+  const [regist, setRegist] = useState({
+    name: "",
     email: "",
     password: "",
   });
-  const handleLogin = async (e, params) => {
+
+  //handler button
+  const handleSubmit = async (e, params) => {
     e.preventDefault();
-    console.log("TEST");
+    // console.log("TEST");
     if (params === "login") {
       await logInWithEmailAndPassword(login.email, login.password);
-      console.log("SELESAI await");
+      // console.log("SELESAI await");
+    } else {
+      await registerWithEmailAndPassword(regist.name, regist.email, regist.password);
+      alert("registrasi success");
     }
   };
 
@@ -60,16 +67,16 @@ export default function Login() {
                   <form action="" id="LoginForm">
                     <input type="text" placeholder="Username" onChange={(e) => setLogin({ ...login, email: e.target.value })} />
                     <input type="password" placeholder="Password" onChange={(e) => setLogin({ ...login, password: e.target.value })} />
-                    <button type="submit" className="btn" onClick={(e) => handleLogin(e, "login")}>
+                    <button type="submit" className="btn" onClick={(e) => handleSubmit(e, "login")}>
                       Login
                     </button>
                     <a href="">Forgot Password</a>
                   </form>
                   <form action="" id="RegForm">
-                    <input type="text" placeholder="Username" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button type="submit" className="btn">
+                    <input type="text" placeholder="Username" onChange={(e) => setRegist({ ...regist, name: e.target.value })} />
+                    <input type="email" placeholder="Email" onChange={(e) => setRegist({ ...regist, email: e.target.value })} />
+                    <input type="password" placeholder="Password" onChange={(e) => setRegist({ ...regist, password: e.target.value })} />
+                    <button type="submit" className="btn" onClick={(e) => handleSubmit(e, "regist")}>
                       Register
                     </button>
                   </form>

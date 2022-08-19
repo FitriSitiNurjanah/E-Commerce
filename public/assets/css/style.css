@@ -123,6 +123,14 @@ body {
   display: none;
 }
 
+#logout {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
 /* H O M E   P A G E*/
 #hero {
   background-image: url("../img/hero4.png");
@@ -155,6 +163,7 @@ body {
   cursor: pointer;
   font-weight: 700;
   font-size: 20px;
+  text-decoration: none;
 }
 
 #feature {
