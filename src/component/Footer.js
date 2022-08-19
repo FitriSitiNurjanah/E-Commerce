@@ -1,24 +1,25 @@
 import React from "react";
+import { StyledFooter, Col, H4, P, A, Follow, Row, Copyright } from "./footerStyles";
 
 export default function Footer() {
   return (
     <div>
-      <footer className="section-p1">
-        <div className="col">
+      <StyledFooter className="section-p1">
+        <Col className="col">
           <img className="logo" src="assets/img/logo.png" alt="" />
-          <h4>Contact</h4>
-          <p>
+          <H4>Contact</H4>
+          <P>
             {" "}
             <strong>Address : </strong> Kenanga Terusan No.32, RT.4/RW.3, Cilandak Tim. Jakarta Selatan{" "}
-          </p>
-          <p>
+          </P>
+          <P>
             <strong>Phone :</strong> (021) 27807833
-          </p>
-          <p>
+          </P>
+          <P>
             <strong>Hours : </strong>07:00 - 19:00, Mon - Sat
-          </p>
-          <div className="follow">
-            <h4>Follow Us</h4>
+          </P>
+          <Follow className="follow">
+            <H4>Follow Us</H4>
             <div className="icon">
               <i className="fa fa-facebook-f"></i>
               <i className="fa fa-twitter"></i>
@@ -26,39 +27,39 @@ export default function Footer() {
               <i className="fa fa-pinterest-p"></i>
               <i className="fa fa-youtube"></i>
             </div>
-          </div>
-        </div>
-        <div className="col">
-          <h4>About</h4>
-          <a href="#">About Us</a>
-          <a href="#">Delivery Information</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Contact Us</a>
-        </div>
-        <div className="col">
-          <h4>My Account</h4>
-          <a href="#">Sign In </a>
-          <a href="#">View Cart</a>
-          <a href="#">My Wishlist</a>
-          <a href="#">Track My Order</a>
-          <a href="#">Help</a>
-        </div>
+          </Follow>
+        </Col>
+        <Col className="col">
+          <H4>About</H4>
+          <A href="#">About Us</A>
+          <A href="#">Delivery Information</A>
+          <A href="#">Privacy Policy</A>
+          <A href="#">Terms & Conditions</A>
+          <A href="#">Contact Us</A>
+        </Col>
+        <Col className="col">
+          <H4>My Account</H4>
+          <A href="#">Sign In </A>
+          <A href="#">View Cart</A>
+          <A href="#">My Wishlist</A>
+          <A href="#">Track My Order</A>
+          <A href="#">Help</A>
+        </Col>
 
-        <div className="col install">
-          <h4>Install App</h4>
-          <p>From App Store or Google Play</p>
-          <div className="row">
+        <Col className="col install">
+          <H4>Install App</H4>
+          <P>From App Store or Google Play</P>
+          <Row className="row">
             <img src="assets/img/pay/app.jpg" alt="" />
             <img src="assets/img/pay/play.jpg" alt="" />
-          </div>
-          <p>Secured Payment Gateway</p>
+          </Row>
+          <P>Secured Payment Gateway</P>
           <img src="assets/img/pay/pay.png" alt="" />
-        </div>
-        <div className="copyright">
-          <p>2022, CAP HTML CSS Ecommerce</p>
-        </div>
-      </footer>
+        </Col>
+        <Copyright className="copyright">
+          <P>2022, CAP HTML CSS Ecommerce</P>
+        </Copyright>
+      </StyledFooter>
     </div>
   );
 }
