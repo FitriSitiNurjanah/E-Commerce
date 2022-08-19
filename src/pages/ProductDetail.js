@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 export default function ProductDetail() {
   return (
     <React.Fragment>
@@ -33,9 +34,11 @@ export default function ProductDetail() {
             <option>Large</option>
           </select>
           <input type="number" value="1" />
-          <button className="normal" onclick="tambahKeranjang()" id="addCart">
-            Add to Cart
-          </button>
+          <Link to="/cart">
+            <button className="normal" onclick="tambahKeranjang()" id="addCart">
+              Add to Cart
+            </button>
+          </Link>
           <h4>Product Details</h4>
           <span>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eum cumque iusto, odit incidunt obcaecati nobis dicta nisi, similique sequi natus expedita laboriosam aspernatur consectetur. Pariatur dolorum vero sed quasi?
