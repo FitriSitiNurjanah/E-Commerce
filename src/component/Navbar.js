@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { auth, db, logout } from "../config/firebase/index";
+import { auth, logout } from "../config/firebase/index";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import { StyledHeader, StyledNavbar, Li, StyledMobile, StyledCart, Styledclose, Styledlogout } from "../component/navbarStyles";
 export default function () {
   const [user] = useAuthState(auth);
   const HandlerToggleMobile = () => {
@@ -16,55 +16,57 @@ export default function () {
   return (
     <React.Fragment>
       {" "}
-      <section id="header">
+      <StyledHeader id="header">
         <Link to="/">
           <img src="assets/img/logo.png" className="logo" alt="logo" />
         </Link>
 
         <div>
-          <ul id="navbar">
-            <li>
+          <StyledNavbar id="navbar">
+            <Li>
               <Link to="/">Home</Link>
-            </li>
-            <li>
+            </Li>
+            <Li>
               <Link to="/product">Product</Link>
-            </li>
+            </Li>
             {user ? (
-              <li>
-                <div id="logout" onClick={logout}>
+              <Li>
+                <Styledlogout id="logout" onClick={logout}>
                   Logout
-                </div>
-              </li>
+                </Styledlogout>
+              </Li>
             ) : (
-              <li>
+              <Li>
                 <Link to="/login">Login</Link>
-              </li>
+              </Li>
             )}
-            {user ? (
-              <li id="lg-bag">
+            {user && (
+              <Li id="lg-bag">
                 {" "}
                 <Link to="/cart">
                   <i className="fa fa-shopping-cart"></i>
                 </Link>
-              </li>
-            ) : (
-              <Link to="/login">
-                <i className="fa fa-shopping-cart"></i>
-              </Link>
+              </Li>
             )}
 
-            <a href="#" id="close" onClick={HandlerToggleClose}>
+            <Styledclose href="#" id="close" onClick={HandlerToggleClose}>
               <i className="fa fa-times"></i>
-            </a>
-          </ul>
+            </Styledclose>
+          </StyledNavbar>
         </div>
-        <div id="mobile">
-          <Link to="/cart">
-            <i className="fa fa-shopping-cart"></i>
-          </Link>
+        <StyledMobile id="mobile">
+          <StyledCart>
+            {user ? (
+              <Link to="/cart">
+                <i className="fa fa-shopping-cart"></i>
+              </Link>
+            ) : (
+              <Link to="#"></Link>
+            )}
+          </StyledCart>
           <i id="bar" className="fa fa-outdent" onClick={HandlerToggleMobile}></i>
-        </div>
-      </section>
+        </StyledMobile>
+      </StyledHeader>
     </React.Fragment>
   );
 }

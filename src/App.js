@@ -7,7 +7,6 @@ import Cart from "./pages/Cart";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 function App() {
   return (
