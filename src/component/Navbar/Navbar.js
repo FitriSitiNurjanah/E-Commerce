@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { auth, logout } from "../config/firebase/index";
+import { auth, logout } from "../../config/firebase/index";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { StyledHeader, StyledNavbar, Li, StyledMobile, StyledCart, Styledclose, Styledlogout } from "../component/navbarStyles";
+import { StyledHeader, StyledNavbar, Li, StyledMobile, StyledCart, Styledclose, Styledlogout } from "./navbarStyles";
 export default function () {
   const [user] = useAuthState(auth);
   const HandlerToggleMobile = () => {
