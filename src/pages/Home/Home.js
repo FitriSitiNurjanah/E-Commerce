@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import sectionP1 from "../../component/globalStyles";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           <button>Shop Now</button>
         </section>
 
-        <section id="feature" className="section-p1">
+        <sectionP1 id="feature" className="section-p1">
           <div className="fe-box">
             <img src="assets/img/features/f1.png" alt="" />
             <h6>Free Shipping</h6>
@@ -38,9 +39,9 @@ export default function Home() {
             <img src="assets/img/features/f6.png" alt="" />
             <h6>Support</h6>
           </div>
-        </section>
+        </sectionP1>
 
-        <section id="product1" className="section-p1">
+        <sectionP1 id="product1" className="section-p1">
           <h2> Featured Product</h2>
           <p>Summer Collection New Morden Design </p>
           <div className="pro-container">
@@ -181,7 +182,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </sectionP1>
 
         <section id="banner" className="section-m1">
           <h4>Repear Service</h4>
@@ -191,7 +192,7 @@ export default function Home() {
           <button className="normal">Explore More</button>
         </section>
 
-        <section id="product1" className="section-p1">
+        <sectionP1 id="product1" className="section-p1">
           <h2> New Arrival</h2>
           <p>Summer Collection New Morden Design </p>
           <div className="pro-container">
@@ -332,7 +333,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </sectionP1>
       </React.Fragment>
     </div>
   );
