@@ -4,6 +4,7 @@ export const StyledFooter = styled.footer`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 40px 80px;
 `;
 
 export const Col = styled.div`

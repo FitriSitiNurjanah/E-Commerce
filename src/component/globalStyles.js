@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const StyledGlobal = createGlobalStyle`
 * {
@@ -36,7 +36,6 @@ p {
 
 sectionP1{
   padding: 40px 80px;
-  color:red;
 }
 
 section-m1 {
