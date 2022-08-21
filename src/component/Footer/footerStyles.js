@@ -20,6 +20,11 @@ export const Col = styled.div`
   @media (max-width: 799px) {
     margin-bottom: 50px;
   }
+
+  @media (max-width: 414px) {
+    margin-bottom: 50px;
+    margin-left: -50px;
+  }
 `;
 
 export const H4 = styled.h4`

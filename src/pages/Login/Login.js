@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { auth, logInWithEmailAndPassword, registerWithEmailAndPassword } from "../../config/firebase/index";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import { StyledHero, StyledButton, Page, Card, Btn, Span, FormLogin, RegForm } from "./loginStyles";
 
 export default function Login() {
   const [user, loading, error] = useAuthState(auth);
@@ -53,39 +54,39 @@ export default function Login() {
   };
   return (
     <React.Fragment>
-      <section id="hero" className="login">
-        <div className="account-page">
+      <StyledHero id="hero" className="login">
+        <Page className="account-page">
           <div className="container">
             <div className="row">
               <div className="col-2">
-                <div className="form-container">
-                  <div className="form-btn">
-                    <span onClick={() => onClickToggle("login")}>Login</span>
-                    <span onClick={() => onClickToggle("register")}>Register</span>
+                <Card className="form-container">
+                  <Btn className="form-btn">
+                    <Span onClick={() => onClickToggle("login")}>Login</Span>
+                    <Span onClick={() => onClickToggle("register")}>Register</Span>
                     {/* <hr id="indicator" /> */}
-                  </div>
-                  <form action="" id="LoginForm">
+                  </Btn>
+                  <FormLogin action="" id="LoginForm">
                     <input type="text" placeholder="Username" onChange={(e) => setLogin({ ...login, email: e.target.value })} />
                     <input type="password" placeholder="Password" onChange={(e) => setLogin({ ...login, password: e.target.value })} />
-                    <button type="submit" className="btn" onClick={(e) => handleSubmit(e, "login")}>
+                    <StyledButton type="submit" className="btn" onClick={(e) => handleSubmit(e, "login")}>
                       Login
-                    </button>
+                    </StyledButton>
                     <a href="">Forgot Password</a>
-                  </form>
-                  <form action="" id="RegForm">
+                  </FormLogin>
+                  <RegForm action="" id="RegForm">
                     <input type="text" placeholder="Username" onChange={(e) => setRegist({ ...regist, name: e.target.value })} />
                     <input type="email" placeholder="Email" onChange={(e) => setRegist({ ...regist, email: e.target.value })} />
                     <input type="password" placeholder="Password" onChange={(e) => setRegist({ ...regist, password: e.target.value })} />
-                    <button type="submit" className="btn" onClick={(e) => handleSubmit(e, "regist")}>
+                    <StyledButton type="submit" className="btn" onClick={(e) => handleSubmit(e, "regist")}>
                       Register
-                    </button>
-                  </form>
-                </div>
+                    </StyledButton>
+                  </RegForm>
+                </Card>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </Page>
+      </StyledHero>
     </React.Fragment>
   );
 }
