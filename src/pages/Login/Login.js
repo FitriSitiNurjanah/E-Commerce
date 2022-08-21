@@ -54,37 +54,31 @@ export default function Login() {
   };
   return (
     <React.Fragment>
-      <StyledHero id="hero" className="login">
-        <Page className="account-page">
-          <div className="container">
-            <div className="row">
-              <div className="col-2">
-                <Card className="form-container">
-                  <Btn className="form-btn">
-                    <Span onClick={() => onClickToggle("login")}>Login</Span>
-                    <Span onClick={() => onClickToggle("register")}>Register</Span>
-                    {/* <hr id="indicator" /> */}
-                  </Btn>
-                  <FormLogin action="" id="LoginForm">
-                    <input type="text" placeholder="Username" onChange={(e) => setLogin({ ...login, email: e.target.value })} />
-                    <input type="password" placeholder="Password" onChange={(e) => setLogin({ ...login, password: e.target.value })} />
-                    <StyledButton type="submit" className="btn" onClick={(e) => handleSubmit(e, "login")}>
-                      Login
-                    </StyledButton>
-                    <a href="">Forgot Password</a>
-                  </FormLogin>
-                  <RegForm action="" id="RegForm">
-                    <input type="text" placeholder="Username" onChange={(e) => setRegist({ ...regist, name: e.target.value })} />
-                    <input type="email" placeholder="Email" onChange={(e) => setRegist({ ...regist, email: e.target.value })} />
-                    <input type="password" placeholder="Password" onChange={(e) => setRegist({ ...regist, password: e.target.value })} />
-                    <StyledButton type="submit" className="btn" onClick={(e) => handleSubmit(e, "regist")}>
-                      Register
-                    </StyledButton>
-                  </RegForm>
-                </Card>
-              </div>
-            </div>
-          </div>
+      <StyledHero>
+        <Page>
+          <Card>
+            <Btn>
+              <Span onClick={() => onClickToggle("login")}>Login</Span>
+              <Span onClick={() => onClickToggle("register")}>Register</Span>
+              {/* <hr id="indicator" /> */}
+            </Btn>
+            <FormLogin id="LoginForm">
+              <input type="text" placeholder="Username" onChange={(e) => setLogin({ ...login, email: e.target.value })} />
+              <input type="password" placeholder="Password" onChange={(e) => setLogin({ ...login, password: e.target.value })} />
+              <StyledButton type="submit" className="btn" onClick={(e) => handleSubmit(e, "login")}>
+                Login
+              </StyledButton>
+              <a href="">Forgot Password</a>
+            </FormLogin>
+            <RegForm id="RegForm">
+              <input type="text" placeholder="Username" onChange={(e) => setRegist({ ...regist, name: e.target.value })} />
+              <input type="email" placeholder="Email" onChange={(e) => setRegist({ ...regist, email: e.target.value })} />
+              <input type="password" placeholder="Password" onChange={(e) => setRegist({ ...regist, password: e.target.value })} />
+              <StyledButton type="submit" className="btn" onClick={(e) => handleSubmit(e, "regist")}>
+                Register
+              </StyledButton>
+            </RegForm>
+          </Card>
         </Page>
       </StyledHero>
     </React.Fragment>
