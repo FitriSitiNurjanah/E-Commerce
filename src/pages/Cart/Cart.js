@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledHeader, Cart, CartTable, CardAdd, coupon } from "./cartStyles";
+import { StyledHeader, Cart, CartTable, CardAdd, Coupon, Input, StyledSubtotal } from "./cartStyles";
 
 export default function () {
   return (
@@ -91,14 +91,14 @@ export default function () {
       </Cart>
 
       <CardAdd id="CardAdd" className="section-p1">
-        <coupon id="coupon">
+        <Coupon>
           <h3>Apply Coupon</h3>
           <div>
-            <input type="text" placeholder="Input your coupon" />
+            <Input type="text" placeholder="Input your coupon" />
             <button className="normal">Apply</button>
           </div>
-        </coupon>
-        <div id="subtotal">
+        </Coupon>
+        <StyledSubtotal id="subtotal">
           <h3>Cart Totals</h3>
           <table>
             <tr>
@@ -119,7 +119,7 @@ export default function () {
             </tr>
           </table>
           <button className="normal">Checkout</button>
-        </div>
+        </StyledSubtotal>
       </CardAdd>
     </React.Fragment>
   );
