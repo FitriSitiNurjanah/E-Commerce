@@ -46,8 +46,16 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: #088178;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
   color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
 `;
 
 export const Span = styled.span`

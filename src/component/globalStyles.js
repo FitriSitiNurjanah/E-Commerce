@@ -41,19 +41,6 @@ sectionP1{
 section-m1 {
   margin: 400px 0;
 }
-
-button.normal {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 15px 30px;
-  color: #000;
-  background-color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: 0.2s;
-}
 `;
 
 export default StyledGlobal;
