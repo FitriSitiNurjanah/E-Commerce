@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { StyledHeader, StyledProduct1, Styledpagination } from "./productStyles";
-import { ProContainer, Pro, StyledDes } from "../Home/homeStyles";
+import { StyledHeader, StyledProduct1, Styledpagination, A, IMG, Styledcart } from "./productStyles";
+import { ProContainer, Pro, StyledDes, Span, H5, start, H4 } from "../Home/homeStyles";
 export default function product() {
   return (
     <React.Fragment>
@@ -11,281 +11,89 @@ export default function product() {
         <p>Save more with coupons & up to 70% off</p>\
       </StyledHeader>
 
-      <StyledProduct1 id="product1" className="section-p1">
-        <ProContainer className="pro-container">
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f1.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f2.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f3.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f4.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f5.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f6.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f7.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/f8.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
+      <StyledProduct1>
+        <ProContainer>
+          <Styledcart>
+            <Link to="/productDetail">
+              <Pro>
+                <IMG src={require("../../assets/img/products/f1.jpg")} alt="" />
+                <StyledDes>
+                  <Span>adidas</Span>
+                  <H5>Cartoun astronot tshirt</H5>
+                  <div className="star">
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                  </div>
+                  <H4>$78</H4>
+                </StyledDes>
+                <A>
+                  <i className="fa fa-shopping-cart cart"></i>
+                </A>
+              </Pro>
+            </Link>
 
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n1.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n2.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n3.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n4.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n5.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n6.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n7.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
-          <Pro className="pro">
-            <img src={require("../../assets/img/products/n8.jpg")} alt="" />
-            <StyledDes className="des">
-              <span>adidas</span>
-              <h5>Cartoun astronot tshirt</h5>
-              <div className="star">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-              </div>
-              <h4>$78</h4>
-            </StyledDes>
-            <a href="#">
-              <i className="fa fa-shopping-cart cart"></i>
-            </a>
-          </Pro>
+            <Link to="/productDetail">
+              <Pro>
+                <IMG src={require("../../assets/img/products/f2.jpg")} alt="" />
+                <StyledDes>
+                  <Span>adidas</Span>
+                  <H5>Cartoun astronot tshirt</H5>
+                  <div className="star">
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                  </div>
+                  <H4>$78</H4>
+                </StyledDes>
+                <A>
+                  <i className="fa fa-shopping-cart cart"></i>
+                </A>
+              </Pro>
+            </Link>
+
+            <Link to="/productDetail">
+              <Pro>
+                <IMG src={require("../../assets/img/products/f3.jpg")} alt="" />
+                <StyledDes>
+                  <Span>adidas</Span>
+                  <H5>Cartoun astronot tshirt</H5>
+                  <div className="star">
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                  </div>
+                  <H4>$78</H4>
+                </StyledDes>
+                <A>
+                  <i className="fa fa-shopping-cart cart"></i>
+                </A>
+              </Pro>
+            </Link>
+
+            <Link to="/productDetail">
+              <Pro>
+                <IMG src={require("../../assets/img/products/f4.jpg")} alt="" />
+                <StyledDes>
+                  <Span>adidas</Span>
+                  <H5>Cartoun astronot tshirt</H5>
+                  <div className="star">
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                    <i className="fa fa-star"></i>
+                  </div>
+                  <H4>$78</H4>
+                </StyledDes>
+                <A>
+                  <i className="fa fa-shopping-cart cart"></i>
+                </A>
+              </Pro>
+            </Link>
+          </Styledcart>
         </ProContainer>
       </StyledProduct1>
 

@@ -29,7 +29,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f1.jpg" alt="" />
+                <img src={require("../../assets/img/products/f1.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>
@@ -45,7 +45,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f2.jpg" alt="" />
+                <img src={require("../../assets/img/products/f2.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>
@@ -61,7 +61,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f3.jpg" alt="" />
+                <img src={require("../../assets/img/products/f3.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>
@@ -77,7 +77,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f4.jpg" alt="" />
+                <img src={require("../../assets/img/products/f4.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>

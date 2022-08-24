@@ -2,6 +2,7 @@ import styled from "styled-components";
 import img from "../../assets/img/hero4.png";
 import imgButton from "../../assets/img/button.png";
 import imgBanner2 from "../../assets/img/banner/b2.jpg";
+import { Link } from "react-router-dom";
 export const StyledHero = styled.div`
   background-image: url(${img});
   height: 90vh;
@@ -118,7 +119,7 @@ export const StyledProduct1 = styled.div`
 
 export const ProContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evently;
   padding-top: 20px;
   flex-wrap: wrap;
 
@@ -136,6 +137,7 @@ export const Pro = styled.div`
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   margin: 15px 0;
+  margin-right: 11px;
   transition: 0.2s ease;
   position: relative;
 
@@ -170,29 +172,31 @@ export const StyledDes = styled.div`
   text-align: start;
   padding: 10px 0;
 
-  span {
-    color: #606063;
-    font-size: 12px;
-  }
-
-  h5 {
-    padding-top: 7px;
-    color: #1a1a1a;
-    font-size: px;
-  }
-
   i {
     font-size: 12px;
     color: rgb(243, 181, 25);
   }
-
-  h4 {
-    padding-top: 7px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #088178;
-  }
 `;
+
+export const H4 = styled.div`
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+`;
+
+export const Span = styled.span`
+  color: #606063;
+  font-size: 12px;
+`;
+
+export const H5 = styled.h5`
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: px;
+`;
+
+export const start = styled.div``;
 
 //Banner
 export const StyledBanner = styled.div`
@@ -272,4 +276,10 @@ export const StyledBanner = styled.div`
         }
       }
     
+`;
+
+export const LinkToDetail = styled(Link)`
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: px;
 `;

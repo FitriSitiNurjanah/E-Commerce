@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import img from "../../assets/img/banner/b1.jpg";
-
 export const StyledHeader = styled.div`
   background-image: url(${img});
   width: 100%;
@@ -39,55 +38,27 @@ export const Pro = styled.div`
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
   }
 
-  img {
-    width: 100%;
-    border-radius: 20px;
-  }
-  a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    font-weight: 500;
-    color: #088178;
-    border: 1px solid #cce7d0;
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-  }
-
   @media (max-width: 799px) {
     margin: 15px;
   }
 `;
 
-export const StyledDes = styled.div`
-  text-align: start;
-  padding: 10px 0;
-
-  span {
-    color: #606063;
-    font-size: 12px;
-  }
-
-  h5 {
-    padding-top: 7px;
-    color: #1a1a1a;
-    font-size: px;
-  }
-
-  i {
-    font-size: 12px;
-    color: rgb(243, 181, 25);
-  }
-
-  h4 {
-    padding-top: 7px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #088178;
-  }
+export const IMG = styled.img`
+  width: 100%;
+  border-radius: 20px;
+`;
+export const A = styled.a`
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
 `;
 
 export const Styledpagination = styled.div`
@@ -106,4 +77,8 @@ export const Styledpagination = styled.div`
     font-size: 16px;
     font-weight: 600;
   }
+`;
+
+export const Styledcart = styled.div`
+  display: flex;
 `;
