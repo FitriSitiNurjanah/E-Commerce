@@ -15,27 +15,27 @@ export default function Home() {
         <Card id="feature" className="section-p1">
           <StyledFeature>
             <StyledBox>
-              <img src="assets/img/features/f1.png" alt="" />
+              <img src={require("../../assets/img/features/f1.png")} alt="" />
               <h6>Free Shipping</h6>
             </StyledBox>
             <StyledBox>
-              <img src="assets/img/features/f2.png" alt="" />
+              <img src={require("../../assets/img/features/f2.png")} alt="" />
               <h6>Online Order</h6>
             </StyledBox>
             <StyledBox>
-              <img src="assets/img/features/f3.png" alt="" />
+              <img src={require("../../assets/img/features/f3.png")} alt="" />
               <h6>Save Money</h6>
             </StyledBox>
             <StyledBox>
-              <img src="assets/img/features/f4.png" alt="" />
+              <img src={require("../../assets/img/features/f4.png")} alt="" />
               <h6>Promotions</h6>
             </StyledBox>
             <StyledBox>
-              <img src="assets/img/features/f5.png" alt="" />
+              <img src={require("../../assets/img/features/f5.png")} alt="" />
               <h6>Happy Sell</h6>
             </StyledBox>
             <StyledBox>
-              <img src="assets/img/features/f6.png" alt="" />
+              <img src={require("../../assets/img/features/f6.png")} alt="" />
               <h6>Support</h6>
             </StyledBox>
           </StyledFeature>
@@ -47,7 +47,7 @@ export default function Home() {
             <p>Summer Collection New Morden Design </p>
             <ProContainer className="pro-container">
               <Pro className="pro">
-                <img src="assets/img/products/f1.jpg" alt="" />
+                <img src={require("../../assets/img/products/f1.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -64,7 +64,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/f2.jpg" alt="" />
+                <img src={require("../../assets/img/products/f2.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -81,7 +81,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/f3.jpg" alt="" />
+                <img src={require("../../assets/img/products/f3.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -98,7 +98,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/f4.jpg" alt="" />
+                <img src={require("../../assets/img/products/f4.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -115,7 +115,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/f5.jpg" alt="" />
+                <img src={require("../../assets/img/products/f5.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -132,7 +132,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/f6.jpg" alt="" />
+                <img src={require("../../assets/img/products/f6.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -149,7 +149,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/f7.jpg" alt="" />
+                <img src={require("../../assets/img/products/f7.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -166,7 +166,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/f8.jpg" alt="" />
+                <img src={require("../../assets/img/products/f8.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -202,7 +202,7 @@ export default function Home() {
             <p>Summer Collection New Morden Design </p>
             <ProContainer className="pro-container">
               <Pro className="pro">
-                <img src="assets/img/products/n1.jpg" alt="" />
+                <img src={require("../../assets/img/products/n1.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -219,7 +219,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/n2.jpg" alt="" />
+                <img src={require("../../assets/img/products/n2.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -236,7 +236,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/n3.jpg" alt="" />
+                <img src={require("../../assets/img/products/n3.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -253,7 +253,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/n4.jpg" alt="" />
+                <img src={require("../../assets/img/products/n4.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -270,7 +270,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/n5.jpg" alt="" />
+                <img src={require("../../assets/img/products/n5.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -287,7 +287,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/n6.jpg" alt="" />
+                <img src={require("../../assets/img/products/n6.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -304,7 +304,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/n7.jpg" alt="" />
+                <img src={require("../../assets/img/products/n7.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
@@ -321,7 +321,7 @@ export default function Home() {
                 </a>
               </Pro>
               <Pro className="pro">
-                <img src="assets/img/products/n8.jpg" alt="" />
+                <img src={require("../../assets/img/products/n8.jpg")} alt="" />
                 <StyledDes>
                   <span>adidas</span>
                   <h5>Cartoun astronot tshirt</h5>
