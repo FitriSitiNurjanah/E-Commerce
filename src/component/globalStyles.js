@@ -1,42 +1,48 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const h1 = styled.h1`
+export const StyledGlobal = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+body {
+  width: 100%;
+}
+h1 {
   font-size: 50px;
   line-height: 64px;
   color: #222;
-`;
-
-export const h2 = styled.h2`
+}
+h2 {
   font-size: 46px;
   line-height: 54px;
   color: #222;
-`;
-
-export const h4 = styled.h4`
+}
+h4 {
   font-size: 20px;
   color: #222;
-`;
-
-export const h7 = styled.h7`
+}
+h7 {
   font-weight: 700;
   font-size: 12px;
-`;
-
-export const p = styled.p`
+}
+p {
   font-size: 16px;
   color: #465b52;
   margin: 15px 0 20px 0;
-`;
+}
 
-export const sectionP1 = styled.section`
+sectionP1{
   padding: 40px 80px;
-`;
+}
 
-export const sectionM1 = styled.section`
-  margin: 40px 0;
-`;
+section-m1 {
+  margin: 400px 0;
+}
 
-export const buttonNormal = styled.button`
+button.normal {
   font-size: 14px;
   font-weight: 600;
   padding: 15px 30px;
@@ -47,8 +53,7 @@ export const buttonNormal = styled.button`
   border: none;
   outline: none;
   transition: 0.2s;
+}
 `;
 
-export const body = styled.body`
-  width: 100%;
-`;
+export default StyledGlobal;

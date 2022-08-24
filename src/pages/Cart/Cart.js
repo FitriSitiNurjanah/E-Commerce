@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { StyledHeader, Cart, CartTable, CardAdd, Coupon, Input, StyledSubtotal } from "./cartStyles";
 
 export default function () {
   return (
     <React.Fragment>
-      <section id="page-header">
+      <StyledHeader id="page-header">
         <h2>#StayHome</h2>
         <p>Save more with coupons & up to 70% off</p>
-      </section>
+      </StyledHeader>
 
-      <section id="cart" className="section-p1">
-        <table width="100%">
+      <Cart id="cart" className="section-p1">
+        <CartTable width="100%">
           <thead>
             <tr>
               <td> Remove </td>
@@ -30,7 +29,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f1.jpg" alt="" />
+                <img src={require("../../assets/img/products/f1.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>
@@ -46,7 +45,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f2.jpg" alt="" />
+                <img src={require("../../assets/img/products/f2.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>
@@ -62,7 +61,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f3.jpg" alt="" />
+                <img src={require("../../assets/img/products/f3.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>
@@ -78,7 +77,7 @@ export default function () {
                 </i>
               </td>
               <td>
-                <img src="assets/img/products/f4.jpg" alt="" />
+                <img src={require("../../assets/img/products/f4.jpg")} alt="" />
               </td>
               <td>Cartoon astronot T-Shirt</td>
               <td>$118</td>
@@ -88,18 +87,18 @@ export default function () {
               <td>$118</td>
             </tr>
           </tbody>
-        </table>
-      </section>
+        </CartTable>
+      </Cart>
 
-      <section id="cart-add" className="section-p1">
-        <div id="coupon">
+      <CardAdd id="CardAdd" className="section-p1">
+        <Coupon>
           <h3>Apply Coupon</h3>
           <div>
-            <input type="text" placeholder="Input your coupon" />
+            <Input type="text" placeholder="Input your coupon" />
             <button className="normal">Apply</button>
           </div>
-        </div>
-        <div id="subtotal">
+        </Coupon>
+        <StyledSubtotal id="subtotal">
           <h3>Cart Totals</h3>
           <table>
             <tr>
@@ -120,8 +119,8 @@ export default function () {
             </tr>
           </table>
           <button className="normal">Checkout</button>
-        </div>
-      </section>
+        </StyledSubtotal>
+      </CardAdd>
     </React.Fragment>
   );
 }

@@ -13,6 +13,8 @@ export const StyledHeader = styled.div`
   right: 0;
 `;
 
+
+
 export const StyledNavbar = styled.ul`
   display: flex;
   align-items: center;

@@ -7,7 +7,7 @@ import Cart from "./pages/Cart/Cart";
 import Navbar from "./component/Navbar/Navbar";
 import Footer from "./component/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { StyledGlobal } from "./component/globalStyles";
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +20,7 @@ function App() {
         <Route exact path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
+      <StyledGlobal />
     </BrowserRouter>
   );
 }
