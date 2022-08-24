@@ -1,15 +1,15 @@
 import React from "react";
-import { StyledHeader, Cart, CartTable, CardAdd, Coupon, Input, StyledSubtotal } from "./cartStyles";
+import { StyledHeader, Cart, CartTable, CardAdd, Coupon, Input, StyledSubtotal, Button } from "./cartStyles";
 
 export default function () {
   return (
     <React.Fragment>
-      <StyledHeader id="page-header">
+      <StyledHeader>
         <h2>#StayHome</h2>
         <p>Save more with coupons & up to 70% off</p>
       </StyledHeader>
 
-      <Cart id="cart" className="section-p1">
+      <Cart>
         <CartTable width="100%">
           <thead>
             <tr>
@@ -95,7 +95,7 @@ export default function () {
           <h3>Apply Coupon</h3>
           <div>
             <Input type="text" placeholder="Input your coupon" />
-            <button className="normal">Apply</button>
+            <Button>Apply</Button>
           </div>
         </Coupon>
         <StyledSubtotal id="subtotal">
@@ -118,7 +118,7 @@ export default function () {
               </td>
             </tr>
           </table>
-          <button className="normal">Checkout</button>
+          <Button>Checkout</Button>
         </StyledSubtotal>
       </CardAdd>
     </React.Fragment>

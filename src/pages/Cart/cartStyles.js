@@ -144,15 +144,23 @@ export const Coupon = styled.div`
   h3 {
     padding-bottom: 15px;
   }
-  button {
-    background-color: #088178;
-    color: #fff;
-    padding: 12px, 20px;
-  }
   @media (max-width: 414px) {
     width: 100%;
     padding-left: 5px;
   }
+`;
+
+export const Button = styled.button`
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
 `;
 
 export const Input = styled.input`
@@ -180,11 +188,6 @@ export const StyledSubtotal = styled.div`
     border: 1px solid #e2e9e1;
     padding: 10px;
     font-size: 13px;
-  }
-  button {
-    background-color: #088178;
-    color: #fff;
-    padding: 12px, 20px;
   }
 
   @media (max-width: 414px) {

@@ -19,12 +19,11 @@ export const StyledHeader = styled.div`
 
 export const StyledProduct1 = styled.div`
   text-align: center;
-  padding: 40px 80px;
 `;
 
 export const Pro = styled.div`
-  width: 23%;
-  min-width: 250px;
+  width: fit-content;
+  // width: 250px;
   padding: 10px 12px;
   border: 1px solid #cce7d0;
   border-radius: 25px;
@@ -33,6 +32,7 @@ export const Pro = styled.div`
   margin: 15px 0;
   transition: 0.2s ease;
   position: relative;
+  display: flex;
 
   &:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
@@ -63,6 +63,7 @@ export const A = styled.a`
 
 export const Styledpagination = styled.div`
   text-align: center;
+  margin-top: 50px;
 
   a {
     text-decoration: none;
@@ -77,8 +78,4 @@ export const Styledpagination = styled.div`
     font-size: 16px;
     font-weight: 600;
   }
-`;
-
-export const Styledcart = styled.div`
-  display: flex;
 `;

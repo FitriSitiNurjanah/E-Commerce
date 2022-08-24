@@ -15,19 +15,31 @@ export const StyledHero = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  h4 {
-    padding-bottom: 10px;
-  }
-
-  h1 {
-    color: #088178;
-  }
-
   @media (max-width: 799px) {
     height: 70vh;
     padding: 0 80px;
     background-position: top 30% right 30%;
   }
+`;
+
+export const HeroH4 = styled.h4`
+  padding-bottom: 10px;
+`;
+
+export const HeroH1 = styled.h1`
+  color: #088178;
+`;
+
+export const HeroH2 = styled.h2`
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+`;
+
+export const HeroP = styled.p`
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
 `;
 
 export const StyledButton = styled.button`
@@ -117,9 +129,14 @@ export const StyledProduct1 = styled.div`
   text-align: center;
 `;
 
+export const H2Product = styled.h2`
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+`;
 export const ProContainer = styled.div`
   display: flex;
-  justify-content: space-evently;
+  justify-content: space-between;
   padding-top: 20px;
   flex-wrap: wrap;
 
@@ -137,7 +154,6 @@ export const Pro = styled.div`
   cursor: pointer;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
   margin: 15px 0;
-  margin-right: 11px;
   transition: 0.2s ease;
   position: relative;
 
@@ -145,39 +161,24 @@ export const Pro = styled.div`
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
   }
 
-  img {
-    width: 100%;
-    border-radius: 20px;
-  }
-  a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #e8f6ea;
-    font-weight: 500;
-    color: #088178;
-    border: 1px solid #cce7d0;
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
-  }
-
   @media (max-width: 799px) {
     margin: 15px;
   }
 `;
 
+export const IMG = styled.img`
+  width: 100%;
+  border-radius: 20px;
+`;
 export const StyledDes = styled.div`
   text-align: start;
   padding: 10px 0;
-
-  i {
-    font-size: 12px;
-    color: rgb(243, 181, 25);
-  }
 `;
 
+export const I = styled.i`
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+`;
 export const H4 = styled.div`
   padding-top: 7px;
   font-size: 15px;
@@ -196,7 +197,19 @@ export const H5 = styled.h5`
   font-size: px;
 `;
 
-export const start = styled.div``;
+export const Cart = styled.a`
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+`;
 
 //Banner
 export const StyledBanner = styled.div`
@@ -210,40 +223,13 @@ export const StyledBanner = styled.div`
   background-size: cover;
   background-position: center;
 
-  h4 {
-    color: #fff;
-    font-size: 16px;]
-  }
-
-  h2 {
-    color: #fff;
-    font-size: 30px;
-    padding: 10px 0;
-  }
-
-  span {
-    color: #ef3636;
-  }
-
+  
   button:hover {
     background: #088178;
     color: #fff;
 
     @media (max-width: 799px) {
       height: 10px;
-      h4 {
-        margin-top: 10px;
-        color: #fff;
-        font-size: 23px;
-      }
-      h2 {
-        color: #fff;
-        font-size: 30px;
-        padding: 10px 0;
-      }
-      span {
-        color: #ef3636;
-      }
       button:hover {
         background: #088178;
         color: #fff;
@@ -252,20 +238,6 @@ export const StyledBanner = styled.div`
 
       @media (max-width: 414px){
           height: 20vh;
-        h4 {
-          margin-top: 30px;
-          color: #fff;
-          font-size: 100px;
-        }
-        h2 {
-          color: #fff;
-          font-size: 3px;
-          padding: 10px 0;
-        }
-      
-        h2 span {
-          color: #ef3636;
-        }
         button {
           margin-bottom: 5px;
         }
@@ -277,9 +249,65 @@ export const StyledBanner = styled.div`
       }
     
 `;
-
-export const LinkToDetail = styled(Link)`
-  padding-top: 7px;
-  color: #1a1a1a;
-  font-size: px;
+export const Button = styled.button`
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
 `;
+
+export const BannerH4 = styled.h4`
+  color: #fff;
+  font-size: 16px;
+
+  @media (max-width: 799px) {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 23px;
+  }
+  @media (max-width: 799px) {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+  }
+`;
+
+export const BannerH2 = styled.h2`
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0;
+
+  @media (max-width: 799px) {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
+  @media (max-width: 414px) {
+    color: #fff;
+    font-size: 3px;
+    padding: 10px 0;
+  }
+`;
+
+export const BannerSpan = styled.span`
+  color: #ef3636;
+  @media (max-width: 799px) {
+    color: #ef3636;
+  }
+  @media (max-width: 414px){span {
+    color: #ef3636;
+  }
+`;
+
+// export const LinkToDetail = styled(Link)`
+//   padding-top: 7px;
+//   color: #1a1a1a;
+//   font-size: px;
+// `;
