@@ -1,17 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { StyledHeader, Cart, CartTable, CardAdd, coupon } from "./cartStyles";
 
 export default function () {
   return (
     <React.Fragment>
-      <section id="page-header">
+      <StyledHeader id="page-header">
         <h2>#StayHome</h2>
         <p>Save more with coupons & up to 70% off</p>
-      </section>
+      </StyledHeader>
 
-      <section id="cart" className="section-p1">
-        <table width="100%">
+      <Cart id="cart" className="section-p1">
+        <CartTable width="100%">
           <thead>
             <tr>
               <td> Remove </td>
@@ -88,17 +87,17 @@ export default function () {
               <td>$118</td>
             </tr>
           </tbody>
-        </table>
-      </section>
+        </CartTable>
+      </Cart>
 
-      <section id="cart-add" className="section-p1">
-        <div id="coupon">
+      <CardAdd id="CardAdd" className="section-p1">
+        <coupon id="coupon">
           <h3>Apply Coupon</h3>
           <div>
             <input type="text" placeholder="Input your coupon" />
             <button className="normal">Apply</button>
           </div>
-        </div>
+        </coupon>
         <div id="subtotal">
           <h3>Cart Totals</h3>
           <table>
@@ -121,7 +120,7 @@ export default function () {
           </table>
           <button className="normal">Checkout</button>
         </div>
-      </section>
+      </CardAdd>
     </React.Fragment>
   );
 }

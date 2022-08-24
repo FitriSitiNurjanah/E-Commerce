@@ -394,7 +394,7 @@ footer a:hover {
 } */
 
 /* S H O P  P A G E */
-#page-header {
+/* #page-header {
   background-image: url("../img/banner/b1.jpg");
   width: 100%;
   height: 40vh;
@@ -404,13 +404,14 @@ footer a:hover {
   text-align: center;
   flex-direction: column;
   padding: 14px;
-}
+} */
 
-#page-header h2,
+/* #page-header h2,
 #page-header p {
   color: #fff;
-}
+} */
 
+/* PRODUK */
 #pagination {
   text-align: center;
 }
@@ -492,20 +493,20 @@ footer a:hover {
 }
 
 /* C A R T */
-#cart table {
+/* #cart table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
   white-space: nowrap;
-}
-#cart {
+} */
+/* #cart {
   overflow-x: auto;
-}
-#cart table img {
+} */
+/* #cart table img {
   width: 70px;
-}
+} */
 
-#cart table td:nth-child(1) {
+/* #cart table td:nth-child(1) {
   width: 100px;
   text-align: center;
 }
@@ -520,34 +521,34 @@ footer a:hover {
 #cart table td:nth-child(4) #cart table td:nth-child(5) #cart table td:nth-child(6) {
   width: 150px;
   text-align: center;
-}
+}  */
 
-#cart table td:nth-child(5) input {
+/* #cart table td:nth-child(5) input {
   width: 50px;
   text-align: center;
   line-height: 20px;
   padding: 10px, 5px, 10px, 15px;
-}
+} */
 
-#cart table thead {
+/* #cart table thead {
   border: 1px solid #e2e9e1;
   line-height: 50px;
   border-left: none;
   border-right: none;
-}
+} */
 
-#cart table thead td {
+/* #cart table thead td {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 13px;
   padding: 18px, 0;
-}
+} */
 
-#cart table tbody tr td {
+/* #cart table tbody tr td {
   padding-top: 15px;
-}
+} */
 
-#cart-add {
+/* #cart-add {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -556,10 +557,10 @@ footer a:hover {
 #coupon {
   width: 50%;
   margin-bottom: 30px;
-}
-#coupon h3 {
+} */
+/* #coupon h3 {
   padding-bottom: 15px;
-}
+} */
 #coupon input {
   padding: 10px 20px;
   outline: none;
