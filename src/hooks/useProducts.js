@@ -20,4 +20,23 @@ const useProducts = () => {
 
   return [data, getAllProducts, isLoading];
 };
-export { useProducts };
+
+const useProductDetail = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState([]);
+
+  const getProductDetail = async (id) => {
+    try {
+      setIsLoading(true);
+      const res = await api.getById(id);
+      setData(res.data);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  return [data, getProductDetail, isLoading];
+};
+export { useProducts, useProductDetail };

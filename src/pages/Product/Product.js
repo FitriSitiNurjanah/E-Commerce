@@ -29,10 +29,10 @@ export default function Product() {
       <Card>
         <StyledProduct1>
           <ProContainer>
-            {data?.map((product) => (
-              <Pro>
-                <IMG src={images[product.img]} alt="" onClick={() => navigate("/productDetail")} />
-                <Link to="/productDetail">
+            {data?.map((product, index) => (
+              <Pro key={index}>
+                <IMG src={images[product.img]} alt="" onClick={() => navigate(`/product/${product.id}`)} />
+                <Link to={`/product/${product.id}`}>
                   <StyledDes>
                     <Span>{product.category}</Span>
                     <H5>{product.title}</H5>
