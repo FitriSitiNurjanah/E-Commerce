@@ -79,3 +79,14 @@ export const Styledpagination = styled.div`
     font-weight: 600;
   }
 `;
+
+export const IsLoading = styled.div`
+  width: 50%;
+  display: block;
+  margin-left: 40%;
+  margin-top: 100px;
+
+  @media (max-width: 768px) {
+    margin-left: 25%;
+  }
+`;
