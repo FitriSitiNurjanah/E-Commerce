@@ -1,20 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ProDetails, SingleImage, SingleProDetail, H4, H2, StyledSelect, Input, Button, Span, Featured } from "./productDetailStyles";
-import { Card, StyledProduct1, ProContainer, Pro, StyledDes, StyledBanner } from "../Home/homeStyles";
+import React, { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { ProDetails, SingleImage, SingleProDetail, H4, H2, StyledSelect, Input, Button, Span } from "./productDetailStyles";
+import { Card, StyledProduct1, ProContainer, Pro, StyledDes } from "../Home/homeStyles";
 import { IMG, Cart, I, H2Product, HeroP, H5 } from "../Home/homeStyles";
+import { useProductDetail } from "../../hooks/useProducts";
+import { images } from "../../assets";
+import { IsLoading } from "../Product/productStyles";
+
 export default function ProductDetail() {
-  return (
+  const { id } = useParams();
+  const [data, getProductDetail, isLoading] = useProductDetail();
+  console.log("Data", data);
+  console.log("id", id);
+  useEffect(() => {
+    if (data.length < 1) {
+      getProductDetail(id);
+    }
+  }, [data]);
+
+  return isLoading ? (
+    <IsLoading>
+      <h1>Loading...</h1>
+    </IsLoading>
+  ) : (
     <React.Fragment>
       <ProDetails>
         <SingleImage>
-          <IMG src={require("../../assets/img/products/f1.jpg")} width="100%" id="MainImg" alt="" />
+          <IMG src={images[data?.img]} alt="" />
         </SingleImage>
 
         <SingleProDetail>
-          <h6>Home / T-Shirt</h6>
-          <H4>Men's Fashion T Shirt</H4>
-          <H2>$120</H2>
+          <h6>{data?.category}</h6>
+          <H4>{data?.title}</H4>
+          <H2>${data?.price}</H2>
           <StyledSelect>
             <option>Select Size</option>
             <option>XL</option>
@@ -27,9 +45,7 @@ export default function ProductDetail() {
             <Button>Add to Cart</Button>
           </Link>
           <H4>Product Details</H4>
-          <Span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eum cumque iusto, odit incidunt obcaecati nobis dicta nisi, similique sequi natus expedita laboriosam aspernatur consectetur. Pariatur dolorum vero sed quasi?
-          </Span>
+          <Span>{data?.details}</Span>
         </SingleProDetail>
       </ProDetails>
 

@@ -1,20 +1,25 @@
 import React, { useEffect } from "react";
 import { useProducts } from "../../hooks/useProducts";
 import { images } from "../../assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Card, StyledProduct1, ProContainer, Pro, StyledDes, IMG, Span, H5, I, H4, Cart } from "../Home/homeStyles";
-import { StyledHeader, Styledpagination } from "./productStyles";
+import { IsLoading, StyledHeader, Styledpagination } from "./productStyles";
 
 export default function Product() {
-  const [data, getAllProducts] = useProducts();
+  const [data, getAllProducts, isLoading] = useProducts();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (data.length < 1) {
       getAllProducts(1, 12, "", "");
     }
-  }, [data.length, getAllProducts]);
+  }, [data.length, getAllProducts, isLoading]);
 
-  return (
+  return isLoading ? (
+    <IsLoading>
+      <h1>Loading...</h1>
+    </IsLoading>
+  ) : (
     <React.Fragment>
       <StyledHeader>
         <h2>#StayHome</h2>
@@ -24,10 +29,10 @@ export default function Product() {
       <Card>
         <StyledProduct1>
           <ProContainer>
-            {data?.map((product) => (
-              <Pro>
-                <IMG src={images[product.img]} alt="" />
-                <Link to="/productDetail">
+            {data?.map((product, index) => (
+              <Pro key={index}>
+                <IMG src={images[product.img]} alt="" onClick={() => navigate(`/product/${product.id}`)} />
+                <Link to={`/product/${product.id}`}>
                   <StyledDes>
                     <Span>{product.category}</Span>
                     <H5>{product.title}</H5>
