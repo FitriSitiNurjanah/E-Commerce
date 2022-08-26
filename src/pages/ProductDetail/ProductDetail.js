@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ProDetails, SingleImage, SingleProDetail, H4, H2, Input, Button, Span } from "./productDetailStyles";
+import { ProDetails, SingleImage, SingleProDetail, H4, H2, Input, Button, Span, StyledSelect } from "./productDetailStyles";
 import { Card, StyledProduct1, ProContainer, Pro, StyledDes } from "../Home/homeStyles";
 import { IMG, Cart, I, H2Product, HeroP, H5 } from "../Home/homeStyles";
 import { Image } from "./productDetailStyles";
@@ -20,6 +20,7 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
   const [detailOrder, setDetailOrder] = useState({
+    size: "",
     quantity: 0,
   });
 
@@ -28,10 +29,10 @@ export default function ProductDetail() {
       alert("User Not Found", "User Not Found, please login", "error");
       navigate("/login");
     } else {
-      const { id, img, title, price, details, category } = data;
+      const { id, img, title, price, details, category, size } = data;
       const { quantity } = detailOrder;
-      const dt = { id, img, title, price, details, category, quantity };
-      if (quantity === 0) {
+      const dt = { id, img, title, price, details, category, quantity, size };
+      if (size === "" || quantity === 0) {
         alert("Please fill all field", "Please fill all field", "error");
       } else {
         dispatch({ type: "ADD_TO_CART", value: dt });
@@ -64,6 +65,13 @@ export default function ProductDetail() {
           <h6>{data?.category}</h6>
           <H4>{data?.title}</H4>
           <H2>${data?.price}</H2>
+          <StyledSelect onChange={(e) => setDetailOrder({ ...detailOrder, size: e.target.value })}>
+            <option>Select Size</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>Small</option>
+            <option>Large</option>
+          </StyledSelect>
           <Input type="number" min="0" defaultValue={0} onChange={(e) => setDetailOrder({ ...detailOrder, quantity: e.target.value })} />
           {user ? (
             <Link to="/cart" onClick={handleCart}>
