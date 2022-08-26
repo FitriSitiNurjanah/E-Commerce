@@ -12,6 +12,7 @@ import { useDispatch } from "react-redux";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -26,17 +27,17 @@ export default function ProductDetail() {
 
   const handleCart = () => {
     if (!user) {
-      alert("User Not Found", "User Not Found, please login", "error");
+      swal("User Not Found", "User Not Found, please login", "error", "warning");
       navigate("/login");
     } else {
       const { id, img, title, price, details, category, size } = data;
       const { quantity } = detailOrder;
       const dt = { id, img, title, price, details, category, quantity, size };
       if (size === "" || quantity === 0) {
-        alert("Please fill all field", "Please fill all field", "error");
+        swal("Please fill all field", "Please fill all field", "error");
       } else {
         dispatch({ type: "ADD_TO_CART", value: dt });
-        alert("Added to cart");
+        swal("Added to cart", "success");
         console.log("ini data ", dt);
       }
     }

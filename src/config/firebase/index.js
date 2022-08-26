@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "firebase/auth";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import swal from "sweetalert";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCDSCWmWQf9WT42o5QOE_m5hy5lVPaoFWI",
@@ -21,7 +22,7 @@ const logInWithEmailAndPassword = async (email, password) => {
     console.log("TEst BERHASIL");
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    swal(err.message);
   }
 };
 
@@ -37,7 +38,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
     });
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    swal(err.message);
   }
 };
 

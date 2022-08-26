@@ -3,7 +3,7 @@ import { auth, logInWithEmailAndPassword, registerWithEmailAndPassword } from ".
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { StyledHero, StyledButton, Page, Card, Btn, Span, FormLogin, RegForm } from "./loginStyles";
-
+import swal from "sweetalert";
 export default function Login() {
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ export default function Login() {
       // console.log("SELESAI await");
     } else {
       await registerWithEmailAndPassword(regist.name, regist.email, regist.password);
-      alert("registrasi success");
+      swal("Registrasi success", "success");
     }
   };
 
@@ -34,7 +34,7 @@ export default function Login() {
       return;
     }
     if (user) navigate("/");
-    if (error) alert(error);
+    if (error) swal(error);
   }, [loading, user, error, navigate]);
 
   // handle menu toggle
