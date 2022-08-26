@@ -8,6 +8,7 @@ import Navbar from "./component/Navbar/Navbar";
 import Footer from "./component/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledGlobal } from "./component/globalStyles";
+import { NavLink } from "react-router-dom";
 
 function App() {
   return (
