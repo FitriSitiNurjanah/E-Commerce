@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../../../src/App.css";
+import { Link, NavLink } from "react-router-dom";
 import { auth, logout } from "../../config/firebase/index";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { StyledHeader, StyledNavbar, Li, StyledMobile, StyledCart, Styledclose, Styledlogout } from "./navbarStyles";
@@ -24,10 +25,14 @@ export default function () {
         <div>
           <StyledNavbar id="navbar">
             <Li>
-              <Link to="/">Home</Link>
+              <NavLink exact to="/" activeClassName="active-link">
+                Home
+              </NavLink>
             </Li>
             <Li>
-              <Link to="/product">Product</Link>
+              <NavLink exact to="/product" activeClassName="active-link">
+                Product
+              </NavLink>
             </Li>
             {user ? (
               <Li>
@@ -37,15 +42,17 @@ export default function () {
               </Li>
             ) : (
               <Li>
-                <Link to="/login">Login</Link>
+                <NavLink exact to="/login" activeClassName="active-link">
+                  Login
+                </NavLink>
               </Li>
             )}
             {user && (
               <Li id="lg-bag">
                 {" "}
-                <Link to="/cart">
+                <NavLink exact to="/cart" activeClassName="active-link">
                   <i className="fa fa-shopping-cart"></i>
-                </Link>
+                </NavLink>
               </Li>
             )}
 
