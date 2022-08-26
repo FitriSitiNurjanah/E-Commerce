@@ -20,6 +20,7 @@ export const StyledHeader = styled.div`
 
 export const Cart = styled.div`
   padding: 40px 80px;
+  align-item: center;
   overflow-x: auto;
 
   @media (max-width: 414px) {
@@ -35,30 +36,6 @@ export const CartTable = styled.table`
 
   img {
     width: 70px;
-  }
-
-  td:nth-child(1) {
-    width: 100px;
-    text-align: center;
-  }
-  td:nth-child(2) {
-    width: 150px;
-    text-align: center;
-  }
-  td:nth-child(3) {
-    width: 250px;
-    text-align: center;
-  }
-  td:nth-child(4) td:nth-child(5) #cart table td:nth-child(6) {
-    width: 150px;
-    text-align: center;
-  }
-
-  td:nth-child(5) input {
-    width: 50px;
-    text-align: center;
-    line-height: 20px;
-    padding: 10px, 5px, 10px, 15px;
   }
 
   @media (max-width: 414px) {
@@ -82,7 +59,7 @@ export const CartTable = styled.table`
     width: 250px;
     text-align: center;
   }
-  td:nth-child(4) td:nth-child(5) td:nth-child(6) {
+  td:nth-child(4) td:nth-child(5) {
     width: 150px;
     text-align: center;
   }

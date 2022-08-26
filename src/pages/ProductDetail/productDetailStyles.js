@@ -10,8 +10,10 @@ export const SingleImage = styled.div`
   margin-right: 50px;
 `;
 
-export const IMG = styled.img`
-width="100%"
+export const Image = styled.img`
+  width: 70%;
+  margin-left: 60px;
+  border-radius: 15px;
 `;
 
 export const SingleProDetail = styled.div`
