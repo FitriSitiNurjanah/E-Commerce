@@ -1,7 +1,14 @@
 import React from "react";
 import { StyledHeader, Cart, CartTable, CardAdd, Coupon, Input, StyledSubtotal, Button } from "./cartStyles";
+import { useSelector, useDispatch } from "react-redux";
+import { IMG } from "pages/Home/homeStyles";
+import { images } from "assets";
+import { removeProductToCart } from "config/redux/card-product/action";
 
 export default function () {
+  const dispatch = useDispatch();
+  const { data } = useSelector((state) => state.productOrder);
+  const subTotalPrice = data.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
   return (
     <React.Fragment>
       <StyledHeader>
@@ -22,70 +29,34 @@ export default function () {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <i className="fa fa-times-circle">
-                  <a href="#"></a>
-                </i>
-              </td>
-              <td>
-                <img src={require("../../assets/img/products/f1.jpg")} alt="" />
-              </td>
-              <td>Cartoon astronot T-Shirt</td>
-              <td>$118</td>
-              <td>
-                <input type="number" value="1" />
-              </td>
-              <td>$118</td>
-            </tr>
-            <tr>
-              <td>
-                <i className="fa fa-times-circle">
-                  <a href="#"></a>
-                </i>
-              </td>
-              <td>
-                <img src={require("../../assets/img/products/f2.jpg")} alt="" />
-              </td>
-              <td>Cartoon astronot T-Shirt</td>
-              <td>$118</td>
-              <td>
-                <input type="number" value="1" />
-              </td>
-              <td>$118</td>
-            </tr>
-            <tr>
-              <td>
-                <i className="fa fa-times-circle">
-                  <a href="#"></a>
-                </i>
-              </td>
-              <td>
-                <img src={require("../../assets/img/products/f3.jpg")} alt="" />
-              </td>
-              <td>Cartoon astronot T-Shirt</td>
-              <td>$118</td>
-              <td>
-                <input type="number" value="1" />
-              </td>
-              <td>$118</td>
-            </tr>
-            <tr>
-              <td>
-                <i className="fa fa-times-circle">
-                  <a href="#"></a>
-                </i>
-              </td>
-              <td>
-                <img src={require("../../assets/img/products/f4.jpg")} alt="" />
-              </td>
-              <td>Cartoon astronot T-Shirt</td>
-              <td>$118</td>
-              <td>
-                <input type="number" value="1" />
-              </td>
-              <td>$118</td>
-            </tr>
+            {data.map((product, index) => (
+              <tr key={index}>
+                <td>
+                  <i className="fa fa-times-circle" onClick={() => dispatch(removeProductToCart(product))}></i>
+                </td>
+                {/* {console.log("product", images)} */}
+                <td>
+                  <IMG src={images[product.img]} alt="" />
+                </td>
+                <td>{product.category}</td>
+                <td>${product.price}</td>
+                <td>
+                  <input
+                    type="number"
+                    min={1}
+                    defaultValue={product.quantity}
+                    onChange={(e) =>
+                      dispatch({
+                        type: "CHANGE_QUANTITY_ITEM",
+                        value: e.target.value,
+                        id: product.id,
+                      })
+                    }
+                  />
+                </td>
+                <td>${product.price * product.quantity}</td>
+              </tr>
+            ))}
           </tbody>
         </CartTable>
       </Cart>
@@ -103,7 +74,7 @@ export default function () {
           <table>
             <tr>
               <td>Cart Subtotal</td>
-              <td>$12.25</td>
+              <td>${subTotalPrice}</td>
             </tr>
             <tr>
               <td>Shipping</td>
@@ -114,7 +85,7 @@ export default function () {
                 <strong>Total</strong>
               </td>
               <td>
-                <strong>$324</strong>
+                <strong>${subTotalPrice}</strong>
               </td>
             </tr>
           </table>
