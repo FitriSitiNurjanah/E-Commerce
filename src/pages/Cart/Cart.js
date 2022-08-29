@@ -8,7 +8,7 @@ import { removeProductToCart } from "config/redux/card-product/action";
 export default function () {
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.productOrder);
-  const subTotalPrice = data.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
+  const subTotalPrice = data.reduce((total, product) => total + product.price * product.quantity, 0);
   return (
     <React.Fragment>
       <StyledHeader>
