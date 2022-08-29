@@ -59,16 +59,20 @@ export const CartTable = styled.table`
     width: 250px;
     text-align: center;
   }
-  td:nth-child(4) td:nth-child(5) {
-    width: 150px;
+  td:nth-child(4) {
+    width: 150px;np
     text-align: center;
   }
-
-  td:nth-child(5) input {
-    width: 50px;
+  td:nth-child(5) {
+    width: 150px;
     text-align: center;
-    line-height: 20px;
-    padding: 10px, 5px, 10px, 15px;
+
+    input {
+      width: 50px;
+      text-align: center;
+      line-height: 20px;
+      padding: 10px, 5px, 10px, 15px;
+    }
   }
 `;
 
